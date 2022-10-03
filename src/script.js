@@ -117,7 +117,7 @@ function updatedata()
 
     var strone = "<table><tr><th>Id</th><th>Name</th><th>Total Salary</th></tr>";
 
-this.newarr;
+    this.newarr;
     for (let y1 of newarr) {
    
         var m1 = y1.salary = 30000;
@@ -131,6 +131,7 @@ this.newarr;
     document.getElementById("tableupdate").innerHTML = strone;
 
 }
+
 
 function updatedataone()
 {
