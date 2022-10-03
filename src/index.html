@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .del {
+        border: none;
+        text-decoration: underline;
+        font-size: 15px;
+        background: #fff;
+    }
+</style>
+
+<body>
+    <h4>TASK 1 Design an HTML page to take the employee details as input from the user and display them according to the
+        given format attached.</h4>
+    <form method="post">
+        <label for="id">Id:</label>
+
+        <input type="text" name="id" id="id">
+        <br>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+        <br>
+        <label for="salary">Basic Sal:</label>
+        <input type="text" name="salary" id="salary">
+        <br>
+
+        <button type="button" id="add" onclick="adding()">Add</button>
+        <p id="messagealert" style="color:red;"></p>
+
+    </form>
+    <p id="table"></p>
+    <h4>TASK 2 is added with TASK 1</h4>
+    <h4>TASK 2 Apply employee name validation (not be empty, not a number). Use try, catch and throw and display the
+        proper error message if any during validation.</h4>
+
+    <h4>TASK 3 Write a JS arrow function to display the employee name and 15% of the salary as output.</h4>
+
+    <p id="arrowmessage"></p>
+    <button type="button" onclick="displaydata()">displaydata</button>
+<h4>TASK 4 Write a class to declare all the the details of the employee as mentioned in the above HTML page. Create an object of the class and display it.</h4>
+
+
+<p id="table2"></p>
+<p id="arrowmessage1"></p>
+<button type="button" onclick="displaydata1()">displaydata1</button>
+
+     
+<h5>TASK 6 Use 'this' keyword to display the employee details (stored in JSON array) on the HTML page.</h5>
+     
+<p id="jsontable"></p>
+
+<p id="tableupdate"></p>
+
+<p id="demoone"></p>
+
+<button type="button" onclick="updatedata()">Update salary</button>
+
+<button type="button" onclick="updatedataone()">object</button>
+<p id="tableupdate2"></p>
+
+<h5>TASK 5 Create a separate JS file with a employee detail and import it to your main HTML/JS code to add and display this employee details in the HTML page.</h5>
+
+
+<p id="demos"></p>
+
+
+<button type="button" onclick="debugging()">debug</button>
+
+<p id="tableupdate3"></p>
+
+    <script src="./script.js"></script>
+    <script src="./script1.js"></script>
+
+    <script type="module">
+        import { id,name,salary } from "./script1.js";
+     
+     let text = " Id :" +  id  +  " Name :"  +  name +  " Salary :"  +  salary + ".";
+
+     
+     
+     document.getElementById("demos").innerHTML = text;    
+         </script>
+
+
+
+<script src="./script.js"></script>
+  
+</body>
+
+</html>
