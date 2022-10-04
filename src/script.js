@@ -3,19 +3,19 @@ let newarr = [
         id: "1",
         name: "john",
         salary: "10,000"
-     
+
     },
     {
         id: "2",
         name: "mark",
         salary: "10,000"
-     
+
     },
     {
         id: "3",
         name: "yash",
         salary: "10,000"
-     
+
     },
 ];
 
@@ -48,10 +48,10 @@ function adding() {
 
 
     for (let x of newarr) {
-    
+
         str += "<tr><td>" + x['id'] + "</td><td>" + x['name'] + "</td><td>" + x['salary'] + "</td><td><input type='submit' onclick='del()' value='delete' class=del></td></tr>";
-     
-     
+
+
     }
 
     str += "</table>";
@@ -69,39 +69,36 @@ function del() {
 
 }
 del();
-function displaydata()
-{
-let hello = "";
+function displaydata() {
+    let hello = "";
 
-hello = (val, salary) => "Name:" + val + "salary:" + salary;
+    hello = (val, salary) => "Name:" + val + "salary:" + salary;
 
-document.getElementById("arrowmessage").innerHTML = hello("Mitali", "15%");
+    document.getElementById("arrowmessage").innerHTML = hello("Mitali", "15%");
 }
-function displaydata1()
-{
-"use strict";
-class Employee {
-    constructor(id, name, salary) {
-        this.id = id;
-        this.name = name;
-        this.salary = salary;
+function displaydata1() {
+    "use strict";
+    class Employee {
+        constructor(id, name, salary) {
+            this.id = id;
+            this.name = name;
+            this.salary = salary;
+        }
     }
+    var str1 = "<table><tr><th>Id</th><th>Name</th><th>Total Salary</th></tr>";
+
+    for (let y of newarr) {
+
+        str1 += "<tr><td>" + y['id'] + "</td><td>" + y['name'] + "</td><td>" + y['salary'] + "</td></tr>";
+    }
+
+    const myEmp = new Employee("1", "John", "8000");
+    document.getElementById("arrowmessage1").innerHTML = myEmp.id + " " + myEmp.name + " " + myEmp.salary;
+
+    str1 += "</table>";
+    document.getElementById("table2").innerHTML = str1;
 }
-var str1 = "<table><tr><th>Id</th><th>Name</th><th>Total Salary</th></tr>";
-
-for (let y of newarr) {
-
-    str1 += "<tr><td>" + y['id'] + "</td><td>" + y['name'] + "</td><td>" + y['salary'] + "</td></tr>";
-}
-
-const myEmp = new Employee("1", "John", "8000");
-document.getElementById("arrowmessage1").innerHTML = myEmp.id + " " + myEmp.name + " " + myEmp.salary;
-
-str1 += "</table>";
-document.getElementById("table2").innerHTML = str1;
-}
-function updatedata()
-{
+function updatedata() {
 
     var id = document.getElementById("id").value;
     console.log(id);
@@ -110,26 +107,20 @@ function updatedata()
     var salary = document.getElementById("salary").value;
     console.log(salary);
 
-  
+
     var objmy = { id: id, name: name, salary: salary };
     console.log(objmy);
-   
-
     var strone = "<table><tr><th>Id</th><th>Name</th><th>Total Salary</th></tr>";
 
-    this.newarr;
     for (let y1 of newarr) {
-   
+
         var m1 = y1.salary = 30000;
 
         console.log(m1);
-      
+        strone += "<tr><td>" + y1['id'] + "</td><td>" + y1['name'] + "</td><td>" + y1['salary'] + "</td></tr>";
+
+    }
   
-}
-
-    strone += "<tr><td>" + y1['id'] + "</td><td>" + y1['name'] + "</td><td>" + y1['salary'] + "</td></tr>"; 
-
-
     strone += "</table>";
     document.getElementById("tableupdate").innerHTML = strone;
 
@@ -137,9 +128,8 @@ function updatedata()
 
 
 
-function debugging()
-{
-  
+function debugging() {
+
     var id = document.getElementById("id").value;
     console.log(id);
     var name = document.getElementById("name").value;
@@ -147,28 +137,27 @@ function debugging()
     var salary = document.getElementById("salary").value;
     console.log(salary);
 
-  
+
     var objmy = { id: id, name: name, salary: salary };
     console.log(objmy);
     newarr.push(objmy);
-   
+
 
     var strone1 = "<table><tr><th>Id</th><th>Name</th><th>Total Salary</th></tr>";
-   
+
 
     for (let y1 of newarr) {
-       
-     
-       if(salary<0)
-       {
-   
-    
-        console.log("salary is not less then zero");
-        strone1 += "<tr><td>" + y1['id'] + "</td><td>" + y1['name'] + "</td><td>" + y1['salary'] + "</td></tr>"; 
-       }
-       debugger;
-      
-      
+
+
+        if (salary < 0) {
+
+
+            console.log("salary is not less then zero");
+            strone1 += "<tr><td>" + y1['id'] + "</td><td>" + y1['name'] + "</td><td>" + y1['salary'] + "</td></tr>";
+        }
+        debugger;
+
+
     }
 
     strone1 += "</table>";
