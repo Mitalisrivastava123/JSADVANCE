@@ -123,9 +123,12 @@ function updatedata()
         var m1 = y1.salary = 30000;
 
         console.log(m1);
-        strone += "<tr><td>" + y1['id'] + "</td><td>" + y1['name'] + "</td><td>" + y1['salary'] + "</td></tr>"; 
+      
   
 }
+
+    strone += "<tr><td>" + y1['id'] + "</td><td>" + y1['name'] + "</td><td>" + y1['salary'] + "</td></tr>"; 
+
 
     strone += "</table>";
     document.getElementById("tableupdate").innerHTML = strone;
@@ -133,38 +136,10 @@ function updatedata()
 }
 
 
-function updatedataone()
-{
-   
-    var id = document.getElementById("id").value;
-    console.log(id);
-    var name = document.getElementById("name").value;
-    console.log(name);
-    var salary = document.getElementById("salary").value;
-    console.log(salary);
-
-  
-    var objmy = { id: id, name: name, salary: salary };
-    console.log(objmy);
-    newarr.push(objmy);
-   
-
-    var strone = "<table><tr><th>Id</th><th>Name</th><th>Total Salary</th></tr>";
-
-
-    for (let y1 of newarr) {
-     
-       
-        strone += "<tr><td>" + y1['id'] + "</td><td>" + y1['name'] + "</td><td>" + y1['salary'] + "</td></tr>"; 
-    }
-
-    strone += "</table>";
-    document.getElementById("tableupdate2").innerHTML = strone;
-
-}
 
 function debugging()
 {
+  
     var id = document.getElementById("id").value;
     console.log(id);
     var name = document.getElementById("name").value;
@@ -179,19 +154,34 @@ function debugging()
    
 
     var strone1 = "<table><tr><th>Id</th><th>Name</th><th>Total Salary</th></tr>";
-
+   
 
     for (let y1 of newarr) {
+       
      
        if(salary<0)
        {
-        debugger;
+   
+    
+        console.log("salary is not less then zero");
         strone1 += "<tr><td>" + y1['id'] + "</td><td>" + y1['name'] + "</td><td>" + y1['salary'] + "</td></tr>"; 
        }
+       debugger;
+      
+      
     }
 
     strone1 += "</table>";
     document.getElementById("tableupdate3").innerHTML = strone1;
 
 }
+
+
+
+
+
+
+
+
+
 
