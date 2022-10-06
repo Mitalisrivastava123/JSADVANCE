@@ -2,19 +2,23 @@ let newarr = [
     {
         id: "1",
         name: "john",
-        salary: "10,000"
+        salary: "10000",
+        updatedsal:"10000"
+        
 
     },
     {
         id: "2",
         name: "mark",
-        salary: "10,000"
+        salary: "10000",
+        updatedsal:"10000"
 
     },
     {
         id: "3",
         name: "yash",
-        salary: "10,000"
+        salary: "10000",
+        updatedsal:"10000"
 
     },
 ];
@@ -26,6 +30,7 @@ function adding() {
     console.log(name);
     var salary = document.getElementById("salary").value;
     console.log(salary);
+    alert(salary);
 
     let message = document.getElementById("messagealert");
     message.innerHTML = "";
@@ -70,11 +75,28 @@ function del() {
 }
 del();
 function displaydata() {
-    let hello = "";
+// var id = document.getElementById("id").value;
+// console.log(id);
+// var name = document.getElementById("name").value;
+// console.log(name);
+// var salary = document.getElementById("salary").value;
+// console.log(salary);
 
-    hello = (val, salary) => "Name:" + val + "salary:" + salary;
 
-    document.getElementById("arrowmessage").innerHTML = hello("Mitali", "15%");
+// var objmy1 = { id: id, name: name, salary: salary };
+// console.log(objmy1);
+var strnew1 = "<table><tr><th>Id</th><th>Name</th><th>Total Salary</th><th> 15% of  Salary</tr>";
+
+for (let y2 of newarr) {
+
+    var m2 = (parseInt(y2.salary)*15)/100;
+
+    console.log(m2);
+    strnew1 += "<tr><td>" + y2['id'] + "</td><td>" + y2['name'] + "</td><td>"+y2['salary']+"</td><td>" + m2 + "</td></tr>";
+
+}
+strnew1 += "</table>";
+document.getElementById("tablesal").innerHTML = strnew1;
 }
 function displaydata1() {
     "use strict";
